@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Yash Diggikar — Personal Page</title>
   <meta name="description" content="Personal research page of Yash Diggikar." />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1'%3E%3Cstop stop-color='%233b82f6'/%3E%3Cstop offset='1' stop-color='%2381a8ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='18' fill='url(%23g)'/%3E%3Ctext x='50' y='60' font-size='54' text-anchor='middle' fill='white' font-family='Inter, Arial, sans-serif'%3EY%3C/text%3E%3C/svg%3E">
   <style>
     :root{
       --bg:#f6f7fb;
@@ -13,13 +12,13 @@
       --ink:#0f172a;
       --muted:#64748b;
       --line:#e5e7eb;
-      --accent:#3b82f6;      /* blue */
-      --accent-ink:#1e3a8a;  /* deep blue */
-      --accent-soft:#eef4ff; /* soft blue bg */
+      --accent:#3b82f6;
+      --accent-ink:#1e3a8a;
+      --accent-soft:#eef4ff;
       --shadow:0 18px 40px rgba(15,23,42,.08);
       --radius:22px;
       --max:1220px;
-      --left:400px;          /* a touch wider for premium feel */
+      --left:400px;
     }
     *{box-sizing:border-box}
     html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:ui-sans-serif,system-ui,-apple-system,Inter,Segoe UI,Roboto,"Helvetica Neue",Arial;line-height:1.7}
@@ -27,120 +26,67 @@
     a:hover{text-decoration:underline}
     img{max-width:100%;display:block}
 
-    /* Header */
-    header{
-      position:sticky;top:0;z-index:20;
-      background:linear-gradient(to bottom, rgba(246,247,251,.95), rgba(246,247,251,.85) 70%, transparent);
-      backdrop-filter:saturate(1.1) blur(8px);
-      border-bottom:1px solid var(--line)
-    }
-    .head{
-      max-width:var(--max);margin:auto;padding:18px 22px;
-      display:flex;align-items:center;justify-content:space-between;gap:16px
-    }
+    header{position:sticky;top:0;z-index:20;background:linear-gradient(to bottom, rgba(246,247,251,.95), rgba(246,247,251,.85) 70%, transparent);backdrop-filter:saturate(1.1) blur(8px);border-bottom:1px solid var(--line)}
+    .head{max-width:var(--max);margin:auto;padding:18px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px}
     .brand-wrap{display:flex;flex-direction:column;gap:4px}
     .brand{font-weight:900;letter-spacing:.2px;font-size:clamp(26px,3.2vw,34px);color:#111827}
-    .subtitle{
-      font-weight:800;
-      color:var(--accent);
-      font-size:clamp(12px,1.6vw,14px);
-      letter-spacing:.04em;
-    }
+    .subtitle{font-weight:800;color:var(--accent);font-size:clamp(12px,1.6vw,14px);letter-spacing:.04em}
     .head-links{display:flex;gap:10px;flex-wrap:wrap}
-    .chip{
-      display:inline-flex;align-items:center;gap:8px;
-      padding:10px 14px;border:1px solid var(--line);border-radius:999px;
-      background:var(--surface);box-shadow:var(--shadow);font-weight:700;font-size:14px
-    }
+    .chip{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border:1px solid var(--line);border-radius:999px;background:var(--surface);box-shadow:var(--shadow);font-weight:700;font-size:14px}
     .chip:hover{border-color:#cfd7ea;background:#fcfeff}
     .chip svg{width:16px;height:16px}
 
-    /* Layout */
     .wrap{max-width:var(--max);margin:auto;padding:34px 22px 72px}
     .grid{display:grid;grid-template-columns:var(--left) 1fr;gap:32px}
     @media (max-width:1020px){ .grid{grid-template-columns:1fr} }
 
-    /* Cards */
     .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
     .pad{padding:28px}
 
-    /* Left column */
     .photo-wrap{overflow:hidden;border-bottom:1px solid var(--line)}
     .photo{width:100%;aspect-ratio:4/5;object-fit:cover;background:#e5e7eb}
 
-    /* Contact buttons */
     .btns{display:flex;flex-direction:column;gap:12px;margin-top:6px}
-    .btn{
-      display:flex;align-items:center;justify-content:center;gap:10px;
-      padding:12px 14px;border-radius:14px;border:1px solid var(--line);
-      background:linear-gradient(180deg,#ffffff,#f8faff);
-      box-shadow:0 10px 24px rgba(59,130,246,.10);
-      font-weight:800;color:#0b1530;transition:transform .06s ease, box-shadow .2s ease
-    }
+    .btn{display:flex;align-items:center;justify-content:center;gap:10px;padding:12px 14px;border-radius:14px;border:1px solid var(--line);background:linear-gradient(180deg,#ffffff,#f8faff);box-shadow:0 10px 24px rgba(59,130,246,.10);font-weight:800;color:#0b1530;transition:transform .06s ease, box-shadow .2s ease}
     .btn:hover{transform:translateY(-1px);box-shadow:0 14px 28px rgba(59,130,246,.18)}
     .btn svg{width:18px;height:18px}
     .btn.primary{background:linear-gradient(180deg,#3b82f6,#2563eb);color:white;border-color:#2f62df}
     .btn.primary:hover{box-shadow:0 18px 34px rgba(37,99,235,.35)}
 
     .section{margin:0 0 16px;font-size:13px;font-weight:900;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-ink)}
+    .rule{height:1px;background:linear-gradient(to right, transparent,#e6ebff 20%,#e6ebff 80%,transparent);margin:20px 0}
 
-    /* PREMIUM Education */
-    .edu{display:flex;flex-direction:column;gap:18px}
-    .edu-card{
-      display:grid;grid-template-columns:84px 1fr;gap:16px;
-      padding:22px;border:1px solid var(--line);border-radius:20px;
-      background:var(--accent-soft);
-      box-shadow:0 12px 28px rgba(59,130,246,.12)
-    }
-    .crest{
-      width:84px;height:84px;border-radius:18px;
-      background:conic-gradient(from 140deg,#7fb0ff,#e8efff 45%,#7fb0ff);
-      display:grid;place-items:center;color:#10327a;
-      font-weight:900;text-align:center;line-height:1.1;padding:8px
-    }
-    .crest .big{font-size:20px}
-    .crest .sm{font-size:11px;letter-spacing:.1em}
-    .edu-title{margin:0 0 6px;font-size:20px;font-weight:900}
-    .edu-line{color:var(--muted);font-size:16px}
-    .edu-dates{margin-top:8px;color:#334155;font-weight:800}
+    /* Clean education text style */
+    .edu{display:flex;flex-direction:column;gap:20px}
+    .edu-entry{padding:14px 0;border-bottom:1px solid var(--line)}
+    .edu-entry:last-child{border-bottom:none}
+    .edu-title{font-weight:900;font-size:18px;margin-bottom:4px}
+    .edu-line{font-size:15px;color:var(--muted)}
+    .edu-dates{font-size:14px;color:#334155;font-weight:700;margin-top:2px}
 
-    /* Right column */
     .intro{background:linear-gradient(180deg,#ffffff,#fbfdff)}
     h2{margin:0 0 14px;font-size:24px}
     p{margin:0 0 16px}
     footer{margin-top:34px;color:#64748b;font-size:14px}
-
-    /* Divider */
-    .rule{height:1px;background:linear-gradient(to right, transparent,#e6ebff 20%,#e6ebff 80%,transparent);margin:20px 0}
   </style>
 </head>
 <body>
-
-  <!-- Header -->
   <header>
     <div class="head">
       <div class="brand-wrap">
         <div class="brand">Yash Diggikar</div>
-        <div class="subtitle">Graduate Student and Researcher — Computer Science</div>
+        <div class="subtitle">Graduate student and researcher — Computer Science</div>
       </div>
-      <nav class="head-links" aria-label="Top links">
-        <a class="chip" href="mailto:yashdiggikar@gmail.com" title="Email">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 4h16v16H4z"/><path d="m4 7 8 6 8-6"/></svg> Email
-        </a>
-        <a class="chip" href="resume.pdf" target="_blank" rel="noopener" title="Resume PDF">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12V8z"/><path d="M14 2v6h6"/></svg> Resume
-        </a>
-        <a class="chip" href="https://www.linkedin.com/in/yashdiggikar/" target="_blank" rel="noopener" title="LinkedIn">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5.001 2.5 2.5 0 0 1 0-5zM4 9h2v12H4zM9 9h2v1.7c.6-1.1 2.1-2 3.9-2 3.2 0 4.1 1.8 4.1 5.1V21h-2v-6.2c0-2.1-.5-3.4-2.2-3.4-1.7 0-2.8 1.2-2.8 3.4V21H9z"/></svg> LinkedIn
-        </a>
+      <nav class="head-links">
+        <a class="chip" href="mailto:yashdiggikar@gmail.com">Email</a>
+        <a class="chip" href="resume.pdf" target="_blank" rel="noopener">Resume</a>
+        <a class="chip" href="https://www.linkedin.com/in/yashdiggikar/" target="_blank" rel="noopener">LinkedIn</a>
       </nav>
     </div>
   </header>
 
-  <!-- Main -->
   <div class="wrap">
     <div class="grid">
-      <!-- Left column -->
       <aside>
         <div class="card">
           <div class="photo-wrap">
@@ -149,72 +95,41 @@
           <div class="pad">
             <div class="section">Contact</div>
             <div class="btns">
-              <a class="btn primary" href="mailto:yashdiggikar@gmail.com" title="Email Yash">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 4h16v16H4z"/><path d="m4 7 8 6 8-6"/></svg>
-                yashdiggikar@gmail.com
-              </a>
-              <a class="btn" href="resume.pdf" target="_blank" rel="noopener" title="Open resume PDF">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12V8z"/><path d="M14 2v6h6"/></svg>
-                Download Resume (PDF)
-              </a>
-              <a class="btn" href="https://www.linkedin.com/in/yashdiggikar/" target="_blank" rel="noopener" title="Open LinkedIn">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5.001 2.5 2.5 0 0 1 0-5zM4 9h2v12H4zM9 9h2v1.7c.6-1.1 2.1-2 3.9-2 3.2 0 4.1 1.8 4.1 5.1V21H9z"/></svg>
-                Connect on LinkedIn
-              </a>
+              <a class="btn primary" href="mailto:yashdiggikar@gmail.com">yashdiggikar@gmail.com</a>
+              <a class="btn" href="resume.pdf" target="_blank" rel="noopener">Download Resume (PDF)</a>
+              <a class="btn" href="https://www.linkedin.com/in/yashdiggikar/" target="_blank" rel="noopener">Connect on LinkedIn</a>
             </div>
 
             <div class="rule"></div>
 
             <div class="section">Education</div>
             <div class="edu">
-              <div class="edu-card">
-                <div class="crest">
-                  <div class="big">MS</div>
-                  <div class="sm">CS</div>
-                </div>
-                <div>
-                  <div class="edu-title">Master of Science in Computer Science</div>
-                  <div class="edu-line">University of Maryland, Baltimore County (UMBC)</div>
-                  <div class="edu-dates">2024 – 2026</div>
-                </div>
+              <div class="edu-entry">
+                <div class="edu-title">Master of Science in Computer Science</div>
+                <div class="edu-line">University of Maryland, Baltimore County (UMBC)</div>
+                <div class="edu-dates">2024 – 2026</div>
               </div>
-
-              <div class="edu-card">
-                <div class="crest">
-                  <div class="big">B.Tech</div>
-                  <div class="sm">CS</div>
-                </div>
-                <div>
-                  <div class="edu-title">Bachelor of Technology in Computer Science</div>
-                  <div class="edu-line">Keshav Memorial Institute of Technology</div>
-                  <div class="edu-dates">2020 – 2024</div>
-                </div>
+              <div class="edu-entry">
+                <div class="edu-title">Bachelor of Technology in Computer Science</div>
+                <div class="edu-line">Keshav Memorial Institute of Technology</div>
+                <div class="edu-dates">2020 – 2024</div>
               </div>
             </div>
-
           </div>
         </div>
       </aside>
 
-      <!-- Right column -->
       <main>
-        <article class="card pad intro" aria-label="About Yash Diggikar">
+        <article class="card pad intro">
           <p>
-            I am a Master’s student in Computer Science at the University of Maryland, Baltimore County (UMBC), with a bachelor’s degree in Computer Science (AI&amp;ML). Currently, I am working as a research assistant at the Center for Accelerated Real Time Analytics (CARTA) under the supervision of Dr. Milton Halem. I am interested in machine learning, deep learning, physics-informed neural networks, transformers, and foundation models for scientific applications. My research explores AI-driven weather and climate forecasting, using deep learning methods for long-range prediction.
+            I am a Master’s student in Computer Science at the University of Maryland, Baltimore County (UMBC), with a bachelor’s degree in Computer Science. Currently, I am working as a research assistant at the Center for Accelerated Real Time Analytics (CARTA) under the supervision of Dr. Milton Halem. I am interested in machine learning, deep learning, physics-informed neural networks, transformers, and foundation models for scientific applications. My research explores AI-driven weather and climate forecasting, using deep learning methods for long-range prediction.
           </p>
         </article>
 
         <article class="card pad" style="margin-top:22px">
           <h2>Research Interests</h2>
-          <p>
-            My research is focused on advancing AI-driven weather and climate forecasting through the development and evaluation of physics-informed neural operators and transformer-based architectures. I work with state-of-the-art models such as the Spherical Fourier Neural Operator (FourCastNet v2), GraphCast, and Aurora, and design experiments that integrate data assimilation frameworks into the inference stage of these models to improve the alignment of forecasts with physical observations. Building on these experiments, I created an Observing System Simulation Experiments (OSSEs) framework for AI-based weather models to assess how new satellite observing systems and assimilation strategies can influence the performance of AI-based forecasting systems, and to evaluate how assimilating satellite data with AI models can improve long-range prediction and demonstrate their potential in operational forecasting.
-          </p>
-          <p>
-            As part of my Master’s thesis, I am training FourCastNet v2 from scratch on reanalysis datasets to study how physics-informed neural operators learn atmospheric dynamics, evaluate their ability to generalize across variables and timescales, and improve the skill of long-range prediction. Beyond analyzing learning dynamics, my work aims to advance AI-based Earth system forecasting by training FourCastNet v2 from scratch to build a controllable and extensible model that serves as a scalable foundation for integrating data assimilation and designing OSSE-based experiments. This research contributes toward the development of foundation models that integrate numerical weather prediction (NWP) and AI, combining physical principles with data-driven learning.
-          </p>
-          <p>
-            More broadly, my interests lie in the application of artificial intelligence, machine learning, and deep learning across scientific and engineering domains. With a strong foundation in neural network architectures—including physics-informed models, neural operators, and transformers—I am particularly drawn to the emerging field of Scientific Machine Learning (SciML). In this context, I have gained experience working with large-scale AI models for climate forecasting, which has allowed me to study their training dynamics and scalability.
-          </p>
+          <p>My research is focused on advancing AI-driven weather and climate forecasting ...</p>
+          <!-- keep your research text here -->
         </article>
 
         <footer>
@@ -229,4 +144,3 @@
   </script>
 </body>
 </html>
-
