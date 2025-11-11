@@ -117,6 +117,7 @@
       </aside>
 
       <main>
+        <!-- Intro stays the same -->
         <article class="card pad intro">
           <p>
             I am a Master’s student in Computer Science at the University of Maryland, Baltimore County (UMBC), with a bachelor’s degree in Computer Science. Currently, I am working as a research assistant at the <a href="https://carta.umbc.edu/" target="_blank" rel="noopener">Center for Accelerated Real Time Analytics</a> under the supervision of <a href="https://ebiquity.umbc.edu/person/html/Milton/Halem" target="_blank" rel="noopener">Milton Halem</a>. I am interested in machine learning, deep learning, physics-informed neural networks, transformers, and foundation models for scientific applications. My research explores AI-driven weather and climate forecasting, using deep learning methods for long-range prediction.
@@ -126,16 +127,24 @@
         <article class="card pad" style="margin-top:22px">
           <h2>Research Interests</h2>
 
+          <!-- NEW: Thesis paragraph rewritten for Aurora + CERRA -->
           <p>
-            My research is focused on advancing AI-driven weather and climate forecasting through the development and evaluation of physics-informed neural operators and transformer-based architectures. I work with state-of-the-art models such as the Spherical Fourier Neural Operator (<a href="https://build.nvidia.com/nvidia/fourcastnet/modelcard" target="_blank" rel="noopener">FourCastNet v2</a>), <a href="https://deepmind.google/discover/blog/graphcast-ai-model-for-faster-and-more-accurate-global-weather-forecasting/" target="_blank" rel="noopener">GraphCast</a>, and <a href="https://microsoft.github.io/aurora/intro.html" target="_blank" rel="noopener">Aurora</a>, and design experiments that integrate data assimilation frameworks into the inference stage of these models to improve the alignment of forecasts with physical observations. Building on these experiments, I created an Observing System Simulation Experiments (OSSEs) framework for AI-based weather models to assess how new satellite observing systems and assimilation strategies can influence the performance of AI-based forecasting systems, and to evaluate how assimilating satellite data with AI models can improve long-range prediction and demonstrate their potential in operational forecasting.
+            <strong>Master’s Thesis (in progress):</strong> Fine-tuning <a href="https://microsoft.github.io/aurora/intro.html" target="_blank" rel="noopener">Aurora</a> (1.3&nbsp;billion parameters) on <em>CERRA</em> reanalysis at 5.5&nbsp;km over Europe to increase spatial resolution, improve regional downscaling skill, and advance high-resolution regional AI-based forecasting. <em>Aurora</em> is Microsoft’s foundation model for the Earth system: pretrained on over one million hours of diverse geophysical data and designed to be adapted to multiple tasks (high-resolution weather, air quality, ocean waves) with modest fine-tuning cost; it delivers competitive accuracy at far lower computational expense than traditional NWP and supports specialized high-resolution forecasting workflows. My work adapts Aurora to CERRA’s 5.5&nbsp;km grid, benchmarking regional skill, transferability across variables, and runtime/throughput gains relevant for operational downscaling. <span style="white-space:nowrap;">[refs: model overview, training scale, available variants]</span> 
           </p>
 
+          <!-- Kept OSSE content but added the 2 placeholder links -->
           <p>
-            As part of my Master’s thesis, I am training <a href="https://build.nvidia.com/nvidia/fourcastnet/modelcard" target="_blank" rel="noopener">FourCastNet v2</a> from scratch on reanalysis datasets to study how physics-informed neural operators learn atmospheric dynamics, evaluate their ability to generalize across variables and timescales, and improve the skill of long-range prediction. Beyond analyzing learning dynamics, my work aims to advance AI-based Earth system forecasting by training FourCastNet v2 from scratch to build a controllable and extensible model that serves as a scalable foundation for integrating data assimilation and designing OSSE-based experiments. This research contributes toward the development of foundation models that integrate numerical weather prediction (NWP) and AI, combining physical principles with data-driven learning.
+            I design Observing System Simulation Experiments (OSSEs) for AI-based weather models to evaluate how new satellite observing systems and assimilation strategies affect forecast skill and long-range stability. For reproducibility, I maintain lightweight research codebases for these studies: <a href="https://example.com/aurora-OSSE" target="_blank" rel="noopener">Aurora OSSE (code)</a> and <a href="https://example.com/fcnv2-OSSE" target="_blank" rel="noopener">FourCastNet-v2 OSSE (code)</a>.
           </p>
 
+          <!-- Rewrote this big paragraph to be general AI/ML + agents/NLP/LLMs + coursework -->
           <p>
-            More broadly, my interests lie in the application of artificial intelligence, machine learning, and deep learning across scientific and engineering domains. With a strong foundation in neural network architectures—including physics-informed models, neural operators, and transformers—I am particularly drawn to the emerging field of Scientific Machine Learning (SciML). In this context, I have gained experience working with large-scale AI models for climate forecasting, which has allowed me to study their training dynamics and scalability.
+            More broadly, I work across <strong>AI/ML</strong> with interests that span <strong>foundation models</strong>, <strong>LLMs</strong>, <strong>multimodal/vision-language systems</strong>, and <strong>agentic workflows</strong> (tool-use, planning, and evaluation for autonomous agents). I’m interested in how representation learning, neural operators, and transformer-based modeling transfer across domains—from Earth-system forecasting to <strong>NLP</strong> tasks like retrieval-augmented generation, instruction following, and evaluation with multi-agent setups. I have completed graduate-level coursework in <strong>Machine Learning</strong>, <strong>Natural Language Processing</strong>, and <strong>Artificial Intelligence</strong>, and I enjoy building end-to-end experiments that combine scalable training, evaluation, and careful error analysis.
+          </p>
+
+          <!-- Original FCNv2 paragraph trimmed to fit new focus while keeping intent -->
+          <p>
+            Previously, I worked extensively with state-of-the-art scientific ML models such as the Spherical Fourier Neural Operator (<a href="https://build.nvidia.com/nvidia/fourcastnet/modelcard" target="_blank" rel="noopener">FourCastNet&nbsp;v2</a>) and <a href="https://deepmind.google/discover/blog/graphcast-ai-model-for-faster-and-more-accurate-global-weather-forecasting/" target="_blank" rel="noopener">GraphCast</a>, designing experiments that integrate data-assimilation ideas into inference to better align forecasts with observations and to study long-range behavior.
           </p>
         </article>
 
@@ -151,4 +160,5 @@
   </script>
 </body>
 </html>
+
 
